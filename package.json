@@ -34,5 +34,18 @@
     "lint-staged": {
         "*.js": "eslint --fix",
         "*.{js,md}": "prettier --write"
+    },
+    "dependencies": {
+        "@sinclair/typebox": "^0.33.22",
+        "ajv": "^8.17.1",
+        "ajv-errors": "^3.0.0",
+        "ajv-formats": "^3.0.1",
+        "bcrypt": "^5.1.1",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.1",
+        "jose": "^5.9.6",
+        "jsonwebtoken": "^9.0.2",
+        "mongodb": "^6.10.0",
+        "mongoose": "^8.8.1"
     }
 }
