@@ -3,14 +3,13 @@ import Ajv from 'ajv';
 import addErrors from 'ajv-errors';
 import addFormats from 'ajv-formats';
 import { error } from 'ajv/dist/vocabularies/applicator/dependencies.js';
-import { amountDTOSchema, currencyDTOSchema, dateSchema, idDTOSchema, userIdDTOSchema } from './dto-types-payment.js';
+import { amountDTOSchema, currencyDTOSchema, dateDTOSchema, idDTOSchema, userIdDTOSchema } from './dto-types-payment.js';
 
 const createDTOSchema = Type.Object({
     _id: idDTOSchema,
-    date: dateSchema,
+    date: dateDTOSchema,
     amount: amountDTOSchema,
     currency: currencyDTOSchema,
-    userid: userIdDTOSchema
 },{
     additionalProperties: false,
     errorMessage:{
