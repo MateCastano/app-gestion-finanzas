@@ -22,7 +22,10 @@ const userLoginController = async (req, res) => {
      setExpirationTime('7d').
      sign(encoder.encode(process.env.JWT_PRIVATE_KEY));
   
-     return res.status(200).send({jwt})
+     return res.status(200).send({
+        jwt,
+        id: existingUserByEmail.id,
+     })
 }
 
 export default userLoginController;

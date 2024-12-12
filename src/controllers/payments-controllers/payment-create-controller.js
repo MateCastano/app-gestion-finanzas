@@ -3,7 +3,7 @@ import PaymentModel from "#Schemas/payment-schema.js";
 import UserModel from "#Schemas/user-schema.js";
 import { errors } from "jose";
 
-const showPaymentsByUserController = async(req, res) =>{
+const createPaymentController = async(req, res) =>{
     const{id} = req.headers;
     const{_id, date, amount, currency} = req.body;
 
@@ -19,7 +19,7 @@ const showPaymentsByUserController = async(req, res) =>{
 
     await payment.save();
     
-    return res.status(400).send("Transaccion registrada con exito.");
+    return res.status(200).send("Transaccion registrada con exito.");
 }
 
-export default showPaymentsByUserController;
+export default createPaymentController;
