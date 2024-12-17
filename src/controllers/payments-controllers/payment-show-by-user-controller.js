@@ -7,8 +7,6 @@ const showPaymentsController = async (req, res) => {
     try {
         const userId = req.headers['id'];
 
-        console.log("Header recibido (id):", userId);
-
         if (!userId) {
             return res.status(400).send({ message: "El ID del usuario no fue proporcionado." });
         }
