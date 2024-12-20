@@ -5,11 +5,13 @@ import { Router } from "express";
 import userJWTDTO from "#Dto/dto-user/jwt-dto.js";
 import paymentUpdateDataDTO from "#Dto/dto-payments/payment-update-data-dto.js";
 import paymentUpdateDataController from "#Controllers/payments-controllers/payment-update-data-controller.js";
+import paymentDeleteController from "#Controllers/payments-controllers/payment-delete-controller.js";
 
 const paymentRouter = Router();
 
 paymentRouter.post('/create-payment', userJWTDTO, createPaymentDTO, createPaymentController);
 paymentRouter.get('/show-payment', userJWTDTO, showPaymentsController);
 paymentRouter.post('/update-data', userJWTDTO, paymentUpdateDataDTO, paymentUpdateDataController);
+paymentRouter.post('/delete-payment', userJWTDTO,paymentDeleteController);
 
 export default paymentRouter;
